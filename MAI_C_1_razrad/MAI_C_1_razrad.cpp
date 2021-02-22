@@ -3,20 +3,25 @@ using namespace std;
 
 int main()
 {
-    uint32_t val,del=1;
-    uint8_t i = 0;
-
+    int32_t val,del=1;
+    uint8_t i = 1;
+    
     setlocale(LC_ALL, "Russian");
+ 
     cout << "Введите число" << endl;
     cin >> val;
     
-    while (del<val)
+    while (del<abs((int)val))
     {
         i++;
         del = del * 10;
         //cout << val << ' ' << del << endl;
     }
-    del = del / 10;
+    if (del > 10)
+    {
+        i--;
+        del = del / 10;
+    }
     //cout << del;
     cout << val << '=';
     while (del > 0)
