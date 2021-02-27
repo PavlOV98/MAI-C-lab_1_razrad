@@ -10,7 +10,7 @@ int main()
  
     cout << "Введите число" << endl;
     cin >> val;
-    
+
     while (del<abs((int)val))
     {
         i++;
@@ -26,12 +26,9 @@ int main()
     while (del > 0)
     {
         i--;
-
         if (val / del != 0)
         {
-            cout << val / del;
-            cout << "*10^" << (int)i;
-            cout << '+';
+            cout << val / del << "*10^" << (int)i << '+';
         }
         val = val % del;
         del = del / 10;
